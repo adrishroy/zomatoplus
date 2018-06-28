@@ -9,58 +9,62 @@ import javax.persistence.Table;
 @Entity
 @Table(name="tbl_additem")
 
-public class AddItem {
+public class Items {
 	
 	@Id
-	@GeneratedValue
-	@Column(name="Item_id")
-	private long id;
-	@Column(name="restaurant_id")
-      private long restaurantid;
-	@Column(name="name")
+    @GeneratedValue
+    @Column(name = "item_id")
+    private Long id;
+
+	@Column(name = "restaurant_id")
+	private Long restaurantId;
+	
+	@Column(name = "name")
 	private String name;
-	@Column(name="price")
-	private String price;
-	@Column(name="description")
+	
+	@Column(name = "price")
+	private Double price;
+	
+	@Column(name = "description")
 	private String description;
 
-	public long getid() {
-		 return id;
-	}
-	public AddItem()
-	{
-	}
-	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
-	public long getRestaurantid() {
-		return restaurantid;
-	}
-	public void setRestaurantid(long restaurantid) {
-		this.restaurantid = restaurantid;
-	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPrice() {
+
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+
+	public void setPrice(Double price) {
 		this.price = price;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
+
+	public Long getRestaurantId() {
+		return restaurantId;
+	}
+
+	public void setRestaurantId(Long restaurantId) {
+		this.restaurantId = restaurantId;
+	}
 }

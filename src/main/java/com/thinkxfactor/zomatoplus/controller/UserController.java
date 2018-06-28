@@ -16,7 +16,7 @@ import com.thinkxfactor.zomatoplus.repository.UserRepository;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-@Autowired
+	@Autowired
 	private UserRepository userRepository;
 
 /*	@GetMapping("/loginEn")
